@@ -29,12 +29,11 @@ const About = () => {
               <div className="relative">
                 <div className="w-full max-w-md mx-auto lg:mx-0 aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <div className="w-full h-full bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <User size={120} className="mx-auto mb-4 opacity-80" />
-                      <img src="public/profile.jpeg" alt="Prifile Photo" />
-                      <div className="text-2xl font-bold">Professional Photo</div>
-                      <div className="text-lg opacity-90">Coming Soon</div>
-                    </div>
+                    <img
+                      src="/profile.jpeg"
+                      alt="Profile Photo"
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
                   </div>
                 </div>
                 

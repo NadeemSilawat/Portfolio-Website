@@ -135,15 +135,9 @@ export const experience = [
   {
     id: 2,
     title: "Full Stack Developer",
-<<<<<<< HEAD
     company: "FREELANCE",
     location: "Remote",
     duration: "FEB 2024 - JAN 2025",
-=======
-    company: "StartupXYZ",
-    location: "Remote",
-    duration: "2020 - 2022",
->>>>>>> 8c75edafc7c3156a6fef3be594b11789eec7ea33
     description: [
       "Motivated MCA student with a strong foundation in web development and hands-on internship",
       "experience at Zeetron. Skilled in ReactJS, JavaScript, HTML, CSS, and API integration, with a proven",
