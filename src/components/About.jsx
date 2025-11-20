@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import { CheckCircle, User, Code, Coffee, Target } from 'lucide-react';
 import { about } from '../data/portfolio';
+import profileImg from '../assets/profile.jpeg';
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -30,13 +31,13 @@ const About = () => {
                 <div className="w-full max-w-md mx-auto lg:mx-0 aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <div className="w-full h-full bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 flex items-center justify-center">
                     <img
-                      src="/profile.jpeg"
+                      src={profileImg}
                       alt="Profile Photo"
                       className="w-full h-full object-cover rounded-2xl"
                     />
                   </div>
                 </div>
-                
+
                 {/* Floating elements */}
                 <div className="absolute -top-4 -right-4 bg-primary-500 text-white p-3 rounded-xl shadow-lg">
                   <Code size={24} />
@@ -49,8 +50,8 @@ const About = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {about.stats.map((stat, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="text-center p-6 bg-primary-50 dark:bg-primary-900/20 rounded-xl"
                   >
                     <div className="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
@@ -85,9 +86,9 @@ const About = () => {
                 <div className="space-y-4">
                   {about.highlights.map((highlight, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle 
-                        size={20} 
-                        className="text-green-500 mt-1 flex-shrink-0" 
+                      <CheckCircle
+                        size={20}
+                        className="text-green-500 mt-1 flex-shrink-0"
                       />
                       <p className="text-secondary-600 dark:text-secondary-300">
                         {highlight}
@@ -103,7 +104,7 @@ const About = () => {
                   I'm always open to discussing new opportunities and interesting projects.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button 
+                  <button
                     onClick={() => {
                       const element = document.getElementById('contact');
                       element?.scrollIntoView({ behavior: 'smooth' });
@@ -112,7 +113,7 @@ const About = () => {
                   >
                     Let's Connect
                   </button>
-                  <button 
+                  <button
                     onClick={() => {
                       const element = document.getElementById('projects');
                       element?.scrollIntoView({ behavior: 'smooth' });

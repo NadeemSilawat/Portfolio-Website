@@ -5,7 +5,7 @@ export const personalInfo = {
   email: "im.nadeem.silawat@gmail.com",
   phone: "7424898859",
   location: "Pali",
-  resume: "public/Nadeem-Silawat-Resume_.pdf",
+  resume: "/NadeemSilawat-JIETMCA.pdf",
   social: {
     github: "https://github.com/nadeemsilawat",
     linkedin: "https://linkedin.com/in/nadeemsilawat",
@@ -145,19 +145,19 @@ export const experience = [
       "eager to contribute to dynamic development teams and grow in the software industry."
     ]
   },
-//   {
-//     id: 3,
-//     title: "Frontend Developer",
-//     company: "Digital Agency",
-//     location: "Los Angeles, CA",
-//     duration: "2019 - 2020",
-//     description: [
-//       "Created responsive websites for various clients",
-//       "Worked with WordPress and custom CMS solutions",
-//       "Implemented modern JavaScript frameworks",
-//       "Ensured cross-browser compatibility and accessibility"
-//     ]
-//   }
+  //   {
+  //     id: 3,
+  //     title: "Frontend Developer",
+  //     company: "Digital Agency",
+  //     location: "Los Angeles, CA",
+  //     duration: "2019 - 2020",
+  //     description: [
+  //       "Created responsive websites for various clients",
+  //       "Worked with WordPress and custom CMS solutions",
+  //       "Implemented modern JavaScript frameworks",
+  //       "Ensured cross-browser compatibility and accessibility"
+  //     ]
+  //   }
 ];
 
 export const navigation = [

@@ -2,14 +2,16 @@ import { useState, useEffect } from 'react';
 import { ChevronDown, Download, Mail, ArrowRight } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
+import profileImg from '../assets/profile.jpeg';
+
 const Hero = () => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  
+
   const texts = [
     'Full Stack Developer',
-    'React Specialist', 
+    'React Specialist',
     'Problem Solver',
     'UI/UX Enthusiast'
   ];
@@ -17,7 +19,7 @@ const Hero = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       const current = texts[currentIndex];
-      
+
       if (!isDeleting) {
         if (currentText.length < current.length) {
           setCurrentText(current.substring(0, currentText.length + 1));
@@ -45,8 +47,8 @@ const Hero = () => {
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/20"
     >
       {/* Background decorations */}
@@ -59,14 +61,18 @@ const Hero = () => {
       <div className="container-custom relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
           {/* Profile Image */}
-          {/* <div className="relative inline-block">
+          <div className="relative inline-block">
             <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-white dark:border-secondary-700 shadow-2xl">
               <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-4xl md:text-5xl font-bold">
-                {personalInfo.name.charAt(0)}
+                <img
+                  src={profileImg}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 border-4 border-white dark:border-secondary-800 rounded-full animate-pulse"></div>
-          </div> */}
+          </div>
 
           {/* Name and Title */}
           <div className="space-y-4">
@@ -76,7 +82,7 @@ const Hero = () => {
                 {personalInfo.name}
               </span>
             </h1>
-            
+
             <div className="text-xl md:text-2xl lg:text-3xl text-secondary-600 dark:text-secondary-300 font-medium h-12">
               I'm a{' '}
               <span className="text-primary-600 dark:text-primary-400 font-semibold">
@@ -100,7 +106,7 @@ const Hero = () => {
               View My Work
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            
+
             <button
               onClick={() => scrollToSection('contact')}
               className="btn-secondary flex items-center gap-2 group"
@@ -108,12 +114,14 @@ const Hero = () => {
               <Mail size={18} />
               Get In Touch
             </button>
-            
+
             <a
               href={personalInfo.resume}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 text-secondary-600 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group"
             >
-              <Download size={18} target="_blank" className="group-hover:translate-y-1 transition-transform" />
+              <Download size={18} className="group-hover:translate-y-1 transition-transform" />
               Download CV
             </a>
           </div>
